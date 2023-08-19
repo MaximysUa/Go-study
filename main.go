@@ -1,8 +1,8 @@
 package main
 
 import (
-	"fmt"
 	"Go-study/kata"
+	"fmt"
 )
 
 //func negate(myBoolean *bool) {
@@ -10,6 +10,6 @@ import (
 //}
 
 func main() {
-	fmt.Println(kata.FakeBin("45385593107843568"))
-	fmt.Println(kata.NotMineFakeBin("45385593107843568"))
+	fmt.Println(kata.Between(-2, 2))
+
 }
