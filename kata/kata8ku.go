@@ -67,3 +67,7 @@ func CountSheeps(numbers []bool) int {
 	}
 	return res
 }
+func Xor(a, b bool) bool {
+	
+	return a != b
+  }

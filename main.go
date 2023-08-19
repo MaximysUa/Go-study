@@ -10,6 +10,6 @@ import (
 //}
 
 func main() {
-	fmt.Println(kata.Between(-2, 2))
+	fmt.Println(kata.ArrayElements([] int{-3,1,2,3,-1,-4,-2}))
 
 }
