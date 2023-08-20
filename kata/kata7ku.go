@@ -44,3 +44,16 @@ func NotMineArrayElements(arr []int) int {
 	}
 	return ans
 }
+func RacePodium(blocks int) [3]int {
+	switch {
+	case blocks == 7: // the only exception to the formula
+		return [3]int{2, 4, 1}
+	case blocks%3 == 0:
+		return [3]int{blocks / 3, blocks/3 + 1, blocks/3 - 1}
+	case blocks%3 == 1:
+		return [3]int{blocks/3 + 1, blocks/3 + 2, blocks/3 - 2}
+	case blocks%3 == 2:
+		return [3]int{blocks/3 + 1, blocks/3 + 2, blocks/3 - 1}
+	}
+	panic("invalid input")
+}

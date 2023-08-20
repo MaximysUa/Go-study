@@ -10,6 +10,6 @@ import (
 //}
 
 func main() {
-	fmt.Println(kata.ArrayElements([] int{-3,1,2,3,-1,-4,-2}))
+	fmt.Println(kata.RacePodium(100000))
 
 }
