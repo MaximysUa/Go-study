@@ -8,7 +8,9 @@
             "name": "Launch Package",
             "type": "go",
             "request": "launch",
-            "mode": "auto",
+            "port": 2345,
+            "host": "127.0.0.1",
+            "mode": "debug",
             "program": "${file}"
         }
     ]

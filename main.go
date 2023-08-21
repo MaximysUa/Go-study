@@ -10,6 +10,6 @@ import (
 //}
 
 func main() {
-	fmt.Println(kata.PrinterError("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz"))
+	fmt.Println(kata.Pendulum([]int{27, 27, 19, 21, 22, 28, 24}))
 
 }

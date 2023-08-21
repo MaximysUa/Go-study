@@ -85,3 +85,34 @@ func PrinterError(s string) string {
 	}
 	return fmt.Sprintf("%d/%d", num, len(s))
 }
+func Pendulum(values []int) []int {
+	sort.Ints(values)
+	res := make([]int, len(values))
+	mid := (len(values) - 1) / 2
+	for i, val := range values {
+		if i < len(values) {
+			if i%2 == 0 {
+				res[mid-i] = val
+				mid -= i
+			} else {
+				res[mid+i] = val
+				mid += i
+			}
+		}
+	}
+	return res
+}
+// its better solution then mine
+//func Pendulum(values []int) (dst []int) {
+//	sort.Ints(values)
+//	for i, v := range values {
+//		if i % 2 == 0 {
+//			dst = append([]int{v}, dst...)
+//		} else {
+//			dst = append(dst, v)
+//		}
+//	 }
+//	 
+//	 return
+//}
+
