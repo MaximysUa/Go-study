@@ -10,6 +10,6 @@ import (
 //}
 
 func main() {
-	fmt.Println(kata.RacePodium(100000))
+	fmt.Println(kata.PrinterError("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz"))
 
 }

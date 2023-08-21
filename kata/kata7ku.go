@@ -1,6 +1,9 @@
 package kata
 
-
+import (
+	"fmt"
+	"sort"
+)
 
 func Cats(start, finish int) int {
 	var dig int
@@ -21,7 +24,7 @@ func ArrayElements(arr []int) int {
 	for i := 0; i < len(arr); i++ {
 		flag := false
 		for j := 0; j < len(arr); j++ {
-			if arr[i] == -arr[j]{
+			if arr[i] == -arr[j] {
 				flag = true
 			}
 		}
@@ -32,7 +35,7 @@ func ArrayElements(arr []int) int {
 	return 0
 }
 
-//TODO - разобрать эту хуйню
+// TODO - разобрать эту хуйню
 func NotMineArrayElements(arr []int) int {
 	hash := make(map[int]bool)
 	ans := 0
@@ -56,4 +59,29 @@ func RacePodium(blocks int) [3]int {
 		return [3]int{blocks/3 + 1, blocks/3 + 2, blocks/3 - 1}
 	}
 	panic("invalid input")
+}
+func MaxMultiple(d, b int) int {
+	for i := b; i > 0; i-- {
+		if i%d == 0 {
+			return i
+		}
+	}
+	return 0
+	//variant of solution
+	// return (b / d) * d
+}
+func SortNumbers(numbers []int) []int {
+
+	sort.Ints(numbers)
+	return numbers
+}
+
+func PrinterError(s string) string {
+	var num int
+	for _, value := range s {
+		if value > 'm' {
+			num++
+		}
+	}
+	return fmt.Sprintf("%d/%d", num, len(s))
 }
