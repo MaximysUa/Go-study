@@ -3,6 +3,8 @@ package kata
 import (
 	"fmt"
 	"sort"
+	"strings"
+	"unicode"
 )
 
 func Cats(start, finish int) int {
@@ -102,17 +104,43 @@ func Pendulum(values []int) []int {
 	}
 	return res
 }
-// its better solution then mine
-//func Pendulum(values []int) (dst []int) {
-//	sort.Ints(values)
-//	for i, v := range values {
-//		if i % 2 == 0 {
-//			dst = append([]int{v}, dst...)
-//		} else {
-//			dst = append(dst, v)
-//		}
-//	 }
-//	 
-//	 return
-//}
 
+// its better solution then mine
+//
+//	func Pendulum(values []int) (dst []int) {
+//		sort.Ints(values)
+//		for i, v := range values {
+//			if i % 2 == 0 {
+//				dst = append([]int{v}, dst...)
+//			} else {
+//				dst = append(dst, v)
+//			}
+//		 }
+//
+//		 return
+//	}
+func RakeGarden(garden string) string {
+	arr := strings.Split(garden, " ")
+	for i, val := range arr {
+		
+		if val != "rock" && val != "gravel" {
+			arr[i] = "gravel"
+		}
+	}
+	return strings.Join(arr, " ")
+}
+func AlphCounter(slice []string) []int {
+	alphabet := "abcdefghijklmnopqrstuvwxyz"
+	results := make([]int, len(slice))
+	// Loop strings
+	for sliceIndex, str := range slice {
+	 // Loop characters
+	 for charIndex, character := range str {
+	  // avoid match case
+	  if unicode.ToLower(character) == rune(alphabet[charIndex]) {
+	   results[sliceIndex]++
+	  }
+	 }
+	}
+	return results
+   }
